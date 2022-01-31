@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>BOM - location</title>
+    <meta charset="utf-8">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script type="text/javascript">
+      function iniciar(){
+      var nivel = document.getElementById('nivel').value
+      if(nivel === ''){
+        alert('Selecione um nível para iniciar o jogo')
+        return false
+      }
+      window.location.href = 'index.html?' + nivel
+  }
+    </script>
+	</head>
+  <body onresize="ajustaTamanho()">
+     
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <img src="imagens/game.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <div class="mb-2">
+                <select class="form-control" id="nivel">
+                <option value="">--Selecione o nível--</option>
+                <option value="normal">Normal</option>
+                <option value="dificil">Difícil</option>
+                <option value="vini">Vinicius Mestre Freitas</option>
+              </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <button type="button" onclick="iniciar()" class="btn btn-danger btn-lg" >Iniciar Jogo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+  </body>	
+  
+</html>
